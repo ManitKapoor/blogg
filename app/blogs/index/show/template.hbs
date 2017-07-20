@@ -1,0 +1,33 @@
+
+<div class='modal'>
+
+<div class='modal-content'>
+
+<div class='modal-header'>
+{{model.name}}
+{{#link-to 'blogs.index' class='close'}}X{{/link-to}}
+</div>
+
+<div class='modal-body'>
+
+<div>
+<h3>{{model.type}}</h3>
+<p>{{model.content}}</p>
+</div>
+
+{{#link-to 'blogs.edit' (query-params id=model.id) }}Edit{{/link-to}}
+
+{{#if prev}}
+<button class='prev'{{ action 'setprev' id}}> &#8912; </button>
+{{/if}}
+
+{{#if next}}
+<button class='next' {{ action 'setnext' id}}> &#8913; </button>
+{{/if}}
+
+</div>
+</div>
+
+</div>
+
+{{outlet}}

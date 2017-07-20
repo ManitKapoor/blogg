@@ -1,1 +1,12 @@
-{{outlet}}
+<div class="menub">
+<ul>
+  <li class='active'>{{#link-to 'blogs.add'}}Create Blog{{/link-to}}</li>
+  <li>{{#link-to 'blogs.index'}}Show Blogs{{/link-to}}</li>
+</ul>
+</div>
+<div id='mainpage'>
+<div id='mainbody'>
+  {{outlet}}
+</div>
+</div>
+

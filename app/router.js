@@ -8,8 +8,11 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('blogs', function() {
-    this.route('add');
-    this.route('edit');
+    this.route('index', { path: '/' }, function() {
+      this.route('show',{ path: '/show' });
+    });
+    this.route('add',{ path: '/add'});
+    this.route('edit',{ path: '/edit'});
   });
 });
 
